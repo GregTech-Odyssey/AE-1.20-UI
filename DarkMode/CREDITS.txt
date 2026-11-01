@@ -49,6 +49,10 @@ AE2 的界面尺寸与控件位置由 assets/ae2/screens/*.json 定义，资源�
 GTOCore 为二合一终端的玩家背包改用专属贴图 ae2:guis/me2in1_player_inv.png（176×100，可拖拽独立面板），
 补齐暗色版本，配色与 me_panel / slots_generic 保持一致。
 
+七、无线扩展合成终端图标
+补齐 expatternprovider:item/wireless_ex_ct（无线扩展合成终端）图标，沿用包内无线合成终端样式；
+上游该图标与 AE2 无线合成终端仅相差 4 个像素。
+
 保留未改：GTOCore 的 quest_icons / widget_icons / sort / 能量 / 坐标 / 覆盖层等图标本身就是
 深底浅色的单色图形，放在暗色界面上是正确的，改色反而会失去层次。
 
