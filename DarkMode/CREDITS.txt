@@ -57,6 +57,11 @@ GTOCore 为二合一终端的玩家背包改用专属贴图 ae2:guis/me2in1_play
 包内 ex_crafting_terminal.png 的背包格比模组默认上移 1px，而槽位仍沿用 common/player_inventory.json
 的 bottom 84/26，导致物品比格子低 1px；在该界面单独覆盖 slots 为 bottom 85/27 修正。
 
+九、二合一终端玩家槽位重复定义
+me2in1.json 原先继承上游的 PLAYER_INVENTORY / PLAYER_HOTBAR 槽位定义。GTOCore 的背包面板每帧自行摆放
+这两个槽位，而编码面板切换模式时会触发 AE2 的全局 positionSlots()，按样式把它们重新锚到屏幕底部，
+造成背包面板与物品偶发错位（拖动面板把它移到组件末尾后即恢复）。已删除该重复定义，与亮色包保持一致。
+
 保留未改：GTOCore 的 quest_icons / widget_icons / sort / 能量 / 坐标 / 覆盖层等图标本身就是
 深底浅色的单色图形，放在暗色界面上是正确的，改色反而会失去层次。
 
