@@ -1,0 +1,50 @@
+AE-Light-UI Multi-module — GTO 0.6.0 dev25 适配版
+
+原作者：LeeQianXi（https://github.com/LeeQianXi）
+原作：AE-Light-UI Multi-module v0.5.6.0（文件 AE-Light-UI-GTO-v0.5.6.0.zip）
+来源：https://www.curseforge.com/minecraft/texture-packs/ae-light-ui-multi-module（项目 1477320，文件 8201169）
+许可：GNU LGPLv3，全文见同目录 LICENSE；本修改版同样以 LGPLv3 发布。
+
+修改说明（GregTech Odyssey 团队）：
+在原包基础上合并了 GTO 0.6.0 叠加包，无需再单独加载底包：
+- 修复 ME 二合一终端 / 无线二合一终端界面布局，新增可拖拽调整大小的把手与折叠面板贴图；
+  玩家背包面板改用专属贴图 me2in1_player_inv.png，已同步适配
+- 标签存储总线、标签输出总线、成型面板界面适配，并保留工具箱引用
+- 样板编码、样板访问终端、样板缓存区等 AE 贴图更新
+- 适配 GTM uipro 新界面：配色方案、显示屏、信息/视图图标、只读槽位、数值框等贴图
+- 补齐 uipro 的 midnight 配色方案：GTOCore 任务书与科技树默认读取 gtceu:midnight，
+  原先只覆盖 default.json 导致这些界面仍是深色；现把 midnight 一并覆盖为 AE Light，
+  并补上 status_*/slot_hover_overlay 等 7 个原先缺失的字段
+- 适配 GTOCore 加速卡 (II)~(V)：沿用 AE2 加速卡的灰卡轮廓与指示灯，按等级为侧条和双箭头着色
+  （II 紫、III 品红、IV 青、V 绿），对应 gtocore:item/speed_card_ii ~ speed_card_v
+- 适配 GTOCore 分级 ME 接口：零件正/侧/背贴图 12 张与方块 4 张，沿用包内接口的白框、深靛描边与
+  浅灰层次，仅把强调色替换为等级主题色，对应 gtocore:part/me_interface_ii ~ v 及 gtocore:block/me_interface_ii ~ v
+- 适配 GTOCore AE 物品图标：样板总成升级器 3 张、数据中心聚合终端、样板修改器 Pro，
+  统一为包内的深靛描边 + 灰蓝卡身 + 单一强调色
+- 新增 GTOCore 样板管理终端统计按钮图标 gui/pattern_encoder_stats.png
+- GTOCore ME 二合一终端与样板内容管理终端的灯光层改用包内的稀疏图标语言
+  （原贴图是整块面板式遮罩，叠加在浅色卡面上会糊成白块）
+- 补齐 AE2 设施终端（facility_terminal）卡框与三档灯光层
+- 新增 gtocore:ui/techtree.json 覆盖：科技树画布（AE研究、部件装配、能源生产与传输等页）的
+  分层色带、表头、节点、连线、悬停高亮原先走 GTOCore 自带的原生灰（#C4C4C4 / #B6B6B6 / #8B8B8B），
+  不随 uipro 主题变化；现改为包内的灰蓝紫底色 + 深靛描边，状态色保留绿/金/紫语义
+- 新增 gtocore:ui/questbook.json 覆盖：任务书的亮色令牌（*_light）同样走 GTOCore 出厂灰，
+  现统一为包内灰蓝紫；按钮、进度条轨道、选中章节条这些不分亮暗的令牌也一并从深色改为浅色
+- 补齐 uipro 配色方案缺失的 5 个令牌：card_fill、flow_node_fill、flow_strip_edge、
+  button_text、button_text_disabled（原缺会回落到 GTM 默认的中性灰，与包内色调不一致）
+- 修正两处路径写错导致覆盖不生效的文件：gtceu:gui/icon/item_filter_mode/ → gui/icon/filter_mode/、
+  gtocore:gui/condense_from_*.png → gui/progress_bar/
+- 新增 gtocore:gui/base/refresh.png：原图为纯白，在浅色界面上完全不可见，改为深靛描边
+- 适配 GTOCore 机器界面最后一批贴图（26 张），原图沿用 GT 原生灰（底板 #8B8B8B / 暗部 #373737 /
+  高光 #FFFFFF），在亮色界面上底板偏暗、白色线条与图标几乎不可见：
+  · gui/widget_icons.png（22 个开关/功能图标）、gui/quest_icons.png（任务书图标集）、
+    gui/sort.png、gui/machine_coords_overlay.png、gui/base/energy.png 改为深靛描边 + 灰蓝填充，
+    原本的彩色强调（青/金/绿/红）保留
+  · gui/overlay/{data_crystal,intelligent_scanner,high_speed_mode} 同规则处理
+  · gui/heat_exchanger.png、gui/transaction_box.png、gui/uipro/half_cell.png、
+    gui/uipro/electrochemical/{cell,transfer_cell}.png 底板对齐面板色 #CBCCD4，
+    玻璃管/箭头等浅色实体的明度整体压到面板之下，保住体积感
+  · gui/progress_bar/{research_base,data_generate_base,eureka_what}.png 底板改为 #C4C7D4，
+    白色刻线保留、深色块保留
+  · gui/uipro/electrochemical/ 其余 8 张（输入线、离子/产物箭头、离子与产物小图标）同规则处理
+除上述文件外，其余内容均为原作者作品，未作改动。

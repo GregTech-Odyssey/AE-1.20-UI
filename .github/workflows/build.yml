@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - master*
+      - gto
     types:
       - closed
   workflow_dispatch:

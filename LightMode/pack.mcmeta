@@ -1,16 +1,49 @@
 {
   "pack": {
     "pack_format": 15,
-    "supported_formats": [ 15, 15 ],
+    "supported_formats": [
+      15,
+      15
+    ],
     "description": [
-      {"bold":true,"italic":false,"underlined":false,"strikethrough":false,
-        "text":"By ","color":"#ffffff"},
-      {"bold":true,"italic":false,"underlined":false,"strikethrough":false,
-        "text":"LeeQianXi(https://github.com/LeeQianXi)\n","color":"#ffffff"},
-      {"bold":false,"italic":false,"underlined":false,"strikethrough":false,
-        "text":"1.20.x ","color":"#54fcfc"},
-      {"bold":false,"italic":false,"underlined":false,"strikethrough":false,
-        "text":"Fix AE ViewCell,fit 60+mod","color":"#95959a"}
+      {
+        "bold": true,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "text": "By ",
+        "color": "#ffffff"
+      },
+      {
+        "bold": true,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "text": "LeeQianXi(https://github.com/LeeQianXi)\n",
+        "color": "#ffffff"
+      },
+      {
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "text": "1.20.x ",
+        "color": "#54fcfc"
+      },
+      {
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "text": "Fix AE ViewCell,fit 60+mod",
+        "color": "#95959a"
+      },
+      {
+        "bold": false,
+        "italic": false,
+        "text": "\nGTO 0.6.0 dev25 适配版（已合并叠加包）",
+        "color": "#54fcfc"
+      }
     ]
   }
 }

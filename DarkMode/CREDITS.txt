@@ -1,0 +1,55 @@
+AE-Dark-UI Multi-module — GTO 0.6.0 dev25 适配版
+
+原作者：LeeQianXi（https://github.com/LeeQianXi）
+原作：AE-Dark-UI Multi-module v0.5.6.0（文件 AE-Dark-UI-GTO-v0.5.6.0.zip）
+许可：GNU LGPLv3，全文见同目录 LICENSE；本修改版同样以 LGPLv3 发布。
+
+修改说明（GregTech Odyssey 团队）：
+底包为暗色系 v0.5.6.0，本修改版把它对齐到 GTO 0.6.0 dev25，并补齐暗色主题下会“露白”的界面：
+
+一、GTO 0.6.0 新增内容
+- 适配 GTOCore 加速卡 (II)~(V)：以包内 AE2 加速卡为底稿，保留深灰卡身、金色条与红色指示灯，
+  按等级为侧条和双箭头着色（II 紫、III 品红、IV 青、V 绿），对应 gtocore:item/speed_card_ii ~ speed_card_v
+- 适配 GTOCore 分级 ME 接口：零件正/侧/背贴图 12 张与方块 4 张，沿用包内接口的浅蓝核心与白框，
+  仅把强调色替换为等级主题色，对应 gtocore:part/me_interface_ii ~ v 及 gtocore:block/me_interface_ii ~ v
+
+二、暗色样式（不随贴图走、由模组单独读取的配置）
+- 新增 gtceu:uipro/color_schemes/default.json 与 midnight.json：GTM 的 uipro 内置配色是浅色的，
+  在暗色包里会让机器窗口、标签、按钮发白；现按包内面板色 #42434B 重做整套 60 个令牌，
+  并同时覆盖 midnight（GTOCore 任务书与科技树默认读取 gtceu:midnight）
+- 新增 gtocore:ui/techtree.json：科技树画布（AE研究、部件装配、能源生产与传输等页）出厂是
+  浅灰条带 #C4C4C4 / 表头 #B0B0B0 / 节点 #8B8B8B，在暗色界面里是整块亮白；现改为深灰条带、
+  深靛节点 + 亮色描边，状态色（绿/金/青）保留语义
+- 新增 gtocore:ui/questbook.json：任务书亮色令牌（*_light，任务书默认画布为亮色变体）同样走
+  出厂浅灰，现统一为暗色；按钮、进度条轨道等不分亮暗的深色令牌对齐包内色调（共改写 71 个令牌）
+
+三、GT 原生灰底的机器贴图
+GTOCore / GTM 的机器界面贴图沿用 GT 原生灰（底板 #8B8B8B、暗部 #373737、高光 #FFFFFF），
+在暗色界面里会是一块块亮白底板，逐张改到底板 #42434B：
+- gtocore:gui/heat_exchanger.png、transaction_box.png
+- gtocore:gui/progress_bar/{research_base, data_generate_base, eureka_what}.png
+- gtocore:gui/uipro/half_cell.png、gtocore:gui/uipro/electrochemical/{cell, transfer_cell}.png
+- gtceu:gui/base/slot_dark.png、gtceu:gui/widget/{number_background, button_batch}.png、
+  gtceu:gui/progress_bar/progress_bar_assembler.png、gtceu:gui/uipro/slot_readonly.png
+
+四、修正两处路径写错导致覆盖不生效的文件
+- gtceu:gui/icon/item_filter_mode/ → gtceu:gui/icon/filter_mode/（过滤器模式 3 个图标）
+- gtocore:gui/condense_from_*.png → gtocore:gui/progress_bar/（3 张凝缩进度条）
+
+五、补齐 AE 合成界面缺失的控件布局（搜索框 / 开始并跟踪）
+AE2 的界面尺寸与控件位置由 assets/ae2/screens/*.json 定义，资源包覆盖时若漏掉某个控件的
+布局条目，模组仍会创建该控件，但拿不到位置与尺寸，最终以 0×0 落在左上角 —— 表现为控件消失。
+以下几处补回（坐标取自 AE2 原版，与包内底图凹槽一致）：
+- ae2:screens/craft_confirm.json  合成计划窗口：补 dialogTitle、materialSearch（材料搜索框）、
+  startWithFollow（「开始并跟踪」按钮，100×20，位于取消与开始之间）
+- ae2:screens/crafting_cpu.json   合成状态 / CPU 窗口：补 dialogTitle、materialSearch（材料搜索框）
+- ae2:screens/terminals/terminal_settings.json  终端设置：补「合成完成通知」复选框的悬停提示区域
+
+六、ME 二合一终端玩家背包面板
+GTOCore 为二合一终端的玩家背包改用专属贴图 ae2:guis/me2in1_player_inv.png（176×100，可拖拽独立面板），
+补齐暗色版本，配色与 me_panel / slots_generic 保持一致。
+
+保留未改：GTOCore 的 quest_icons / widget_icons / sort / 能量 / 坐标 / 覆盖层等图标本身就是
+深底浅色的单色图形，放在暗色界面上是正确的，改色反而会失去层次。
+
+除上述文件外，其余内容均为原作者作品，未作改动。

@@ -1,9 +1,6 @@
 {
   "$schema": "schema.json",
-  "includes": [
-    "me2in1.json",
-    "common/switch_toolbox.json"
-  ],
+  "includes": ["me2in1.json", "common/terminal_switch_toolbox.json"],
   "text": {
     "dialog_title": {
       "text": {

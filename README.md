@@ -1,77 +1,82 @@
-# AE-1.20-UI Multi-module adaptation
+# AE-1.20-UI · GTO 适配分支
 
-🌐 **Language / 语言**
-- [![English](https://img.shields.io/badge/lang-en-blue.svg)](docs/en/README.md)
-- [![中文](https://img.shields.io/badge/lang-zh--CN-red.svg)](docs/zh-CN/README.md)
----
+[GregTech Odyssey（GTO）](https://gtodyssey.com) 整合包专用的 [AE-1.20-UI](https://github.com/GregTech-Odyssey/AE-1.20-UI) 材质包分支。
 
-An Applied Energistics-style UI resource pack adapted for Minecraft 1.20, providing a unified AE-style interface for multiple mods while optimizing the text and texture display effects of the UI, including certain text and texture corrections.
+本分支以 [`master-1.20.1`](https://github.com/GregTech-Odyssey/AE-1.20-UI/tree/master-1.20.1) 为底包，针对 **Minecraft 1.20.1 + GregTech Odyssey 0.6.0（dev25）** 的模组环境补齐界面，提供亮色 `LightMode` 与暗色 `DarkMode` 两个版本。
 
-We have added AE-style UIs for a large number of mods, available in both light and dark versions, such as:
-- **Farmer's Delight**
-- **Sophisticated Storage / Core**
-- **Avaritia**
-- ……UIs for other mods are currently in the pipeline.
+## 下载与安装
 
-## Versions
-- Supports Minecraft 1.20
-- Light & Dark variants included
+1. 在 Releases 页下载 `AE-Light-UI-*.zip` 或 `AE-Dark-UI-*.zip`；没有现成产物时也可以克隆本分支自行打包（见下一节）。
+2. 把 zip 放进实例的 `minecraft/resourcepacks/` 目录。
+3. 游戏内「选项 → 资源包」启用它，并移到列表最上方（否则会被其他资源包覆盖）。
+4. 按 `F3 + T` 重载资源。
 
-## Core Features
-1. **Dual-style UI Resources**
-   Provides two UI resource packs: `LightMode` and `DarkMode`, catering to different players' visual preferences.
-2. **Multi-mod Compatibility**
-   Adds AE-style interface adaptations for multiple popular Minecraft mods, covering survival, storage, and tech mods, ensuring visual consistency across different mod interfaces.
-3. **UI Detail Optimization**
-   Includes UI text corrections and texture fixes, repairing display flaws in some mod UIs to enhance the interface's aesthetics and readability.
-4. **Modpack-specific Adaptation**
-   Specially adapted for the [GregTech-Odyssey (GTO)](https://gtodyssey.com) modpack, perfectly compatible with the mod environment of this modpack.
-5. **Lightweight Adaptation**
-   Only modifies UI-related resources without affecting the core functional logic of the mods, fully compatible with the original functions of the mods.
+> 直接把 `LightMode/` 或 `DarkMode/` 文件夹放进 `resourcepacks/` 也可以，效果与 zip 相同。
 
-## Installation and Usage
-1. **Obtain the Resource Pack**
-   You can directly download the latest version of the resource pack from the Releases page of the repository, or clone the repository and package it locally:
-    ```bash
-    git clone https://github.com/LeeQianXi/AE-1.20-UI.git
-    cd ./AE-1.20-UI/scripts
-    bash pack.sh
-    cd ../pack/
-    ```
-2. **Installation Steps**
-    - Place the downloaded or cloned resource pack folder / compressed package into the `resourcepacks` directory of Minecraft
-    - Launch Minecraft, in the "Options - Resource Packs" interface, move this resource pack to the top of the resource pack list
-    - After applying the resource pack, you can experience the AE-style UI interface
+## 本地打包
 
-## Adapted Mods
-Currently adapted mods include:
-- Farmers' Delight
-- Sophisticated Storage
-- Avaritia
-- More mod UI adaptations are under continuous development.
+需要 `bash` 与 `zip`：
 
-
-## Directory Structure Description
-```Plain
-AE-1.20-UI/
-├── docs/              # Repository documentation
-├── LightMode/         # Light theme UI resources, containing all interface textures and configurations under this theme
-├── DarkMode/          # Dark theme UI resources, containing all interface textures and configurations under this theme
-├── scripts/           # Script files related to resource pack building
-├── Tools/             # Pixel replacement tool used for texture creation
-├── .gitignore         # Git version control ignore rules file, defining content that does not need to be included in version control
-├── README.md          # Project quick description document
+```bash
+git clone -b gto https://github.com/GregTech-Odyssey/AE-1.20-UI.git
+cd AE-1.20-UI/scripts
+bash pack.sh
+# 产物：AE-1.20-UI/pack/LightMode.zip、AE-1.20-UI/pack/DarkMode.zip
 ```
 
-## Adapted Modpacks
-- **GregTech-Odyssey (GTO)**: Specially adapted for this modpack, this resource pack can be used directly in this modpack to obtain a unified AE-style interface experience.
+## 与 master-1.20.1 的差异
 
-## Notes
-1. This resource pack needs to be placed at the top of the resource pack list, otherwise its UI effects may be overwritten by other resource packs
-2. This resource pack is incompatible with other AE-style UI resource packs, please disable other UI resource packs of the same type when using
-3. Only supports Minecraft 1.20.x series versions, not compatible with other versions of the Minecraft client
+1. **不携带任何 `assets/*/lang`**
+   界面文案完全交给模组与整合包，避免资源包里的旧翻译覆盖 GTO 的汉化。
+2. **ME 二合一终端完整主题**
+   面板外框、槽位格、玩家背包面板（`me2in1_player_inv.png`）、缩放角、折叠按钮、样板发送行等全部换成包内配色（含无线二合一终端）。
+3. **合成存储器动画面补齐 `.png.mcmeta`**
+   1k~256k 的 `*_storage_light` 是 8 帧动画条带，资源包覆盖时必须同时提供 mcmeta，否则会被压成静态贴图、显示错纹。
+4. **可读性修正**
+   拖拽齿轮常态可见、文本框焦点色、暗色下 GT 机器底板/进度条、uipro 配色方案、任务书与科技树画布。
+5. **GTO 专属内容**
+   GTOCore 加速卡 (II)~(V)、分级 ME 接口、AE 附属模组（AdvancedAE、ExtendedAE、MEGA Cells、neoecoae 等）的界面适配，以及二合一终端的专属面板。
 
-## Contribution
-If you want to participate in the development of this project, adapt AE-style UIs for more mods, or feedback UI display issues, you are welcome to participate through the following ways:
-1. Submit issue feedback, feature suggestions, or propose mods to be adapted later on the Issues page of the repository
-2. Fork the repository and submit a Pull Request to contribute your adaptation content
+完整改动清单见两包内的 `CREDITS.txt`。
+
+## 目录结构
+
+```text
+AE-1.20-UI/
+├── DarkMode/          # 暗色主题资源包
+├── LightMode/         # 亮色主题资源包
+├── scripts/pack.sh    # 本地打包脚本（输出到 pack/）
+├── docs/              # 上游多模组文档（英文 / 简体中文）
+├── .github/           # Issue 模板与自动发布工作流
+├── VERSION            # 当前分支版本号
+└── LICENSE            # GNU LGPLv3
+```
+
+## 注意事项
+
+- 仅修改 UI 贴图与界面布局，不改变模组逻辑。
+- 仅适用于 Minecraft 1.20.x。
+- 与其他 AE 风格 UI 资源包互斥，请只启用其中一个。
+- 本分支不含语言文件；如果界面文案异常，请检查模组或整合包自带的语言文件，而不是资源包。
+
+## 致谢
+
+- 原作：[LeeQianXi](https://github.com/LeeQianXi) 的 AE-1.20-UI Multi-module。
+- GTO 适配：GregTech Odyssey 团队。
+- 许可：GNU LGPLv3，全文见 [LICENSE](LICENSE)；修改版同样以 LGPLv3 发布。
+
+---
+
+## English
+
+This branch is the GregTech Odyssey–specific adaptation of AE-1.20-UI for **Minecraft 1.20.1 / GTO 0.6.0-dev25**. It provides the light (`LightMode`) and dark (`DarkMode`) packs.
+
+Differences from `master-1.20.1`:
+
+- No `assets/*/lang` files, so modpack translations are never overridden.
+- Complete ME 2-in-1 terminal theming, including the new draggable player-inventory panel.
+- Animated storage-cell textures ship their `.png.mcmeta`.
+- Contrast fixes for draggable panel handles, text fields, GT machine UIs, the quest book and the tech tree.
+- GTO-exclusive content: speed cards II–V, tiered ME interfaces and AE add-on UIs.
+
+Install: download a release or run `scripts/pack.sh`, put the zip into `resourcepacks`, enable it and move it to the top, then press `F3 + T`. Licensed under LGPLv3. Original pack by LeeQianXi.
