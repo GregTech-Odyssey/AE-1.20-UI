@@ -21,6 +21,8 @@ AE-Light-UI Multi-module — GTO 0.6.0 dev25 适配版
   （II 紫、III 品红、IV 青、V 绿），对应 gtocore:item/speed_card_ii ~ speed_card_v
 - 适配 GTOCore 分级 ME 接口：零件正/侧/背贴图 12 张与方块 4 张，沿用包内接口的白框、深靛描边与
   浅灰层次，仅把强调色替换为等级主题色，对应 gtocore:part/me_interface_ii ~ v 及 gtocore:block/me_interface_ii ~ v
+- 适配 GTCEu 磁铁与 GTOCore 无人机饰品槽图标：沿用包内饰品槽的单色线稿（#878FA5），
+  对应 gtceu:item/gtmag 与 gtocore:slot/empty_drone_slot
 - 适配 GTOCore AE 物品图标：样板总成升级器 3 张、数据中心聚合终端、样板修改器 Pro，
   统一为包内的深靛描边 + 灰蓝卡身 + 单一强调色
 - 新增 GTOCore 样板管理终端统计按钮图标 gui/pattern_encoder_stats.png

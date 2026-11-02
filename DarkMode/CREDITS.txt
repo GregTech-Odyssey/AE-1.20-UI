@@ -12,6 +12,8 @@ AE-Dark-UI Multi-module — GTO 0.6.0 dev25 适配版
   按等级为侧条和双箭头着色（II 紫、III 品红、IV 青、V 绿），对应 gtocore:item/speed_card_ii ~ speed_card_v
 - 适配 GTOCore 分级 ME 接口：零件正/侧/背贴图 12 张与方块 4 张，沿用包内接口的浅蓝核心与白框，
   仅把强调色替换为等级主题色，对应 gtocore:part/me_interface_ii ~ v 及 gtocore:block/me_interface_ii ~ v
+- 适配 GTCEu 磁铁与 GTOCore 无人机饰品槽图标：沿用包内饰品槽的单色线稿（#878FA5），
+  对应 gtceu:item/gtmag 与 gtocore:slot/empty_drone_slot
 
 二、暗色样式（不随贴图走、由模组单独读取的配置）
 - 新增 gtceu:uipro/color_schemes/default.json 与 midnight.json：GTM 的 uipro 内置配色是浅色的，
