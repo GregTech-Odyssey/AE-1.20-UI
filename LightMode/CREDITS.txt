@@ -1,4 +1,4 @@
-AE-Light-UI Multi-module — GTO 0.6.0 dev25 适配版
+AE-Light-UI Multi-module — GTO 0.6.0 dev26 适配版
 
 原作者：LeeQianXi（https://github.com/LeeQianXi）
 原作：AE-Light-UI Multi-module v0.5.6.0（文件 AE-Light-UI-GTO-v0.5.6.0.zip）
@@ -41,7 +41,8 @@ AE-Light-UI Multi-module — GTO 0.6.0 dev25 适配版
 - 新增 gtocore:gui/base/refresh.png：原图为纯白，在浅色界面上完全不可见，改为深靛描边
 - 适配 GTOCore 机器界面最后一批贴图（26 张），原图沿用 GT 原生灰（底板 #8B8B8B / 暗部 #373737 /
   高光 #FFFFFF），在亮色界面上底板偏暗、白色线条与图标几乎不可见：
-  · gui/widget_icons.png（22 个开关/功能图标）、gui/quest_icons.png（任务书图标集）、
+  · gui/widget_icons.png（23 个开关/功能图标；上游 26.10.26 起扩为 64×192，已补上新增的 32×16 柱状图图标行）、
+    gui/quest_icons.png（任务书图标集）、
     gui/sort.png、gui/machine_coords_overlay.png、gui/base/energy.png 改为深靛描边 + 灰蓝填充，
     原本的彩色强调（青/金/绿/红）保留
   · gui/overlay/{data_crystal,intelligent_scanner,high_speed_mode} 同规则处理

@@ -1,11 +1,11 @@
-AE-Dark-UI Multi-module — GTO 0.6.0 dev25 适配版
+AE-Dark-UI Multi-module — GTO 0.6.0 dev26 适配版
 
 原作者：LeeQianXi（https://github.com/LeeQianXi）
 原作：AE-Dark-UI Multi-module v0.5.6.0（文件 AE-Dark-UI-GTO-v0.5.6.0.zip）
 许可：GNU LGPLv3，全文见同目录 LICENSE；本修改版同样以 LGPLv3 发布。
 
 修改说明（GregTech Odyssey 团队）：
-底包为暗色系 v0.5.6.0，本修改版把它对齐到 GTO 0.6.0 dev25，并补齐暗色主题下会“露白”的界面：
+底包为暗色系 v0.5.6.0，本修改版把它对齐到 GTO 0.6.0 dev26，并补齐暗色主题下会“露白”的界面：
 
 一、GTO 0.6.0 新增内容
 - 适配 GTOCore 加速卡 (II)~(V)：以包内 AE2 加速卡为底稿，保留深灰卡身、金色条与红色指示灯，
