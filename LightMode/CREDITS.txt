@@ -1,4 +1,4 @@
-AE-Light-UI Multi-module — GTO 0.6.0 dev26 适配版
+AE-Light-UI Multi-module — GTO 0.6.0-dev28 适配版
 
 原作者：LeeQianXi（https://github.com/LeeQianXi）
 原作：AE-Light-UI Multi-module v0.5.6.0（文件 AE-Light-UI-GTO-v0.5.6.0.zip）
@@ -52,4 +52,18 @@ AE-Light-UI Multi-module — GTO 0.6.0 dev26 适配版
   · gui/progress_bar/{research_base,data_generate_base,eureka_what}.png 底板改为 #C4C7D4，
     白色刻线保留、深色块保留
   · gui/uipro/electrochemical/ 其余 8 张（输入线、离子/产物箭头、离子与产物小图标）同规则处理
-除上述文件外，其余内容均为原作者作品，未作改动。
+dev28 ui2 修订（2026-11-13）：
+- 补齐神化强化、重铸、宝石切割、附魔库、分解界面、重铸动画与镶嵌提示轮廓。
+  原始资源来自 Apotheosis 7.4.8，由 Shadows_of_Fire / Brennan Ward 提供；
+  来源：https://github.com/Shadows-of-Fire/Apotheosis/tree/1.20
+  对应 assets/apotheosis/textures/gui/{augmenting,reforge,reforge_animation,gem_cutting,library,salvage,socket}.png，
+  本修订调整配色并复用 AE 背包格，保留 UV、尺寸与透明度；这些派生资源沿用 MIT，全文见 licenses/Apotheosis-MIT.txt。
+- 补齐 BetterP2P 1.5.0 高级存储卡界面；原作者 Lasm Gratel、dyedquartz、AE2UEL Team、GlodBlock。
+  来源：https://github.com/LasmGratel/BetterP2P/tree/1.20
+  assets/betterp2p/textures/gui/advanced_memory_card.png 仅修改像素配色，暗色包保留固定深色字需要的浅底。
+  此派生资源沿用 GPL-3.0，全文见 licenses/BetterP2P-GPL-3.0.txt；PNG 即可编辑的源文件。
+  名称悬停时模组额外叠加固定黑色遮罩，已提高列表底色亮度减轻影响；彻底修正需改模组代码。
+- 补齐消音模组 sm_gui_dark.png，复用本包现有 sm_gui.png 主题。
+- 暗色任务书修复完成章节、待领取提示和奖励标题对比度，提高闲置章节亮度。
+
+除上述修改及来源另述的资源外，其余内容为原作者作品。

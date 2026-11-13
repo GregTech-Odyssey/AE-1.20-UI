@@ -9,7 +9,7 @@
   "slots": {
     "AE2INSERTEXPORTCARD_INSERT_CONFIG": {
       "left": 8,
-      "top": 29,
+      "top": 20,
       "grid": "BREAK_AFTER_9COLS"
     }
   },
@@ -25,6 +25,10 @@
     }
   },
   "widgets": {
+    "filter_mode": {
+      "left": 90,
+      "top": 59
+    },
     "back": {
       "left": 152,
       "top": -5,

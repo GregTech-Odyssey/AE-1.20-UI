@@ -52,6 +52,8 @@
   "line_requires_light": "#FFFF9A1F",
   "line_required_for_light": "#FFC77DFF",
   "badge_check_plate_light": "#FFDCDEE8",
+  "help_key_light": "#FF2F5F9E",
+  "help_desc_light": "#FF5C6078",
   "grid_min_px": 16,
   "grid_accent_every": 4,
   "panel_fill": "#FF1B1F24",

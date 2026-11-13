@@ -41,7 +41,7 @@
       {
         "bold": false,
         "italic": false,
-        "text": "\nGTO 0.6.0 dev26 适配版（已合并叠加包）",
+        "text": "\nGTO 0.6.0-dev28 亮色 ui2（含 EMI 配色；需更新 GTM）",
         "color": "#54fcfc"
       }
     ]

@@ -9,7 +9,7 @@
   "slots": {
     "AE2INSERTEXPORTCARD_EXPORT_CONFIG": {
       "left": 8,
-      "top": 29,
+      "top": 20,
       "grid": "BREAK_AFTER_9COLS"
     }
   },
