@@ -4,6 +4,10 @@
 
 本分支以 [`master-1.20.1`](https://github.com/GregTech-Odyssey/AE-1.20-UI/tree/master-1.20.1) 为底包，针对 **Minecraft 1.20.1 + GregTech Odyssey ** 的模组环境补齐界面，提供亮色 `LightMode` 与暗色 `DarkMode` 两个版本。
 
+当前适配版本：**GTO 0.6.0-dev28**。改动与核对范围见 [dev28 适配说明](docs/zh-CN/GTO-dev28.md)。
+
+`ui2` 修订补齐神化强化、重铸、宝石切割、附魔库、分解界面及 BetterP2P 高级存储卡，覆盖消音模组的内置暗色选项，并改善暗色任务书状态文字的可读性。BetterP2P 暗色版保留浅色文字区域，以适配模组固定的深色字。
+
 ## 下载与安装
 
 1. 在 Releases 页下载 `AE-Light-UI-*.zip` 或 `AE-Dark-UI-*.zip`；没有现成产物时也可以克隆本分支自行打包（见下一节）。
