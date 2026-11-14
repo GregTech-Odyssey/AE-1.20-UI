@@ -6,6 +6,8 @@
 
 当前适配版本：**GTO 0.6.0-dev28**。改动与核对范围见 [dev28 适配说明](docs/zh-CN/GTO-dev28.md)。
 
+`ui3` 修订为 EMI 配方侧边按钮补齐暗、亮主题配色，同时覆盖 GTM 的 `default` 与 `midnight` 配色方案。需要搭配包含 [GTM PR #82](https://github.com/GregTech-Odyssey/GregTech-Modern/pull/82) 的版本；旧版 GTM 不会读取新增的按钮颜色。
+
 `ui2` 修订补齐神化强化、重铸、宝石切割、附魔库、分解界面及 BetterP2P 高级存储卡，覆盖消音模组的内置暗色选项，并改善暗色任务书状态文字的可读性。BetterP2P 暗色版保留浅色文字区域，以适配模组固定的深色字。
 
 ## 下载与安装

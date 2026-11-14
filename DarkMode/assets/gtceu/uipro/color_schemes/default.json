@@ -65,6 +65,10 @@
     "flow_node_fill": "#FF34363F",
     "flow_strip_edge": "#FF1D2029",
     "button_text": "#FFE4E6EF",
-    "button_text_disabled": "#FF6A6C78"
+    "button_text_disabled": "#FF6A6C78",
+    "xei_button_fill": "#4A4C56",
+    "xei_button_outline": "#101116",
+    "xei_button_icon": "#E4E6EF",
+    "xei_button_icon_hover": "#6CC0FF"
   }
 }
