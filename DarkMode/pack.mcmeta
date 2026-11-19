@@ -12,7 +12,7 @@
       {"bold":false,"italic":false,"underlined":false,"strikethrough":false,
         "text":"Fix AE ViewCell,fit 60+mod","color":"#95959a"},
       {"bold":false,"italic":false,
-        "text":"\nGTO 0.6.0-dev28 暗色 ui3 · EMI 配方界面适配","color":"#54fcfc"}
+        "text":"\nGTO 0.6.0-dev28 暗色 ui4 · 终端行距与设施筛选图标适配","color":"#54fcfc"}
     ]
   }
 }
