@@ -62,25 +62,25 @@
   },
   "widgets": {
     "modeTabButton0": {
-      "left": 175,
+      "left": 173,
       "bottom": 174,
       "width": 22,
       "height": 22
     },
     "modeTabButton1": {
-      "left": 175,
+      "left": 173,
       "bottom": 153,
       "width": 22,
       "height": 22
     },
     "modeTabButton2": {
-      "left": 175,
+      "left": 173,
       "bottom": 132,
       "width": 22,
       "height": 22
     },
     "modeTabButton3": {
-      "left": 175,
+      "left": 173,
       "bottom": 111,
       "width": 22,
       "height": 22

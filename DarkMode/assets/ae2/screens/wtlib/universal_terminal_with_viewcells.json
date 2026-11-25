@@ -20,7 +20,7 @@
     },
     "upgrades": {
       "$comment": "The upgrade panel found on some screens",
-      "right": -2,
+      "right": 2,
       "top": 134
     }
   }
